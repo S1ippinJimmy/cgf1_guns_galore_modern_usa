@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_Rifle_BoltActionRifle_T0">
+		<defName>CGF1_MWP_Mk13Mod6_Irons_</defName>
+		<label>Mk.13 Mod 6 (Irons)</label>
+		<description>Caliber: .300 Winchester Magnum. 5-round detachable mag. Bolt-Action.
+		
+The Mk.13 is a series of bolt-action sniper rifles that were used by US Navy SEALs (and later, the Marine Corps) starting in the 1990s. All rifles in the Mk.13 series are built off of a Remington 700 long action and are chambered in .300 Winchester Magnum. There are eight rifles in the series (Mod 0-7) with each variant having modifications to the chassis, action, and barrel.
+
+The Mod 0 rifle uses a McMillan A2 chassis, and the Mod 1 rifle is identical except for its left-handed action. The Mod 2 rifle used an Accuracy International AICS chassis instead. The Mod 0/1/2 were later updated with suppressor-ready barrels, with the updated Mod 0 becoming the Mod 3, the Mod 1 becoming the Mod 4, and the Mod 2 becoming the Mod 5. The Mod 6 and Mod 7 rifles switched to a new Accuracy International AX chassis. There were likely never any left-handed versions of the Mod 2/5/6/7.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/Mk13Mod6_Irons</texPath>
+			<drawSize>1.12</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T10_ModernFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>6.2</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_Rifle_Military</li>
+			<li>CGF1_Rifle_Military_Advanced</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>LongShots</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ModernUSA</li>
+			<li>CGF1_GunsGalore_ModernUSA_Sniper</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_300WinchesterMagnum_Rifle</defaultProjectile>
+				<warmupTime>1.7</warmupTime>
+				<range>36.9</range>
+				<soundCast>CGF1_MWP_SFX_Rifle_Bolt1</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(0.9,0.9)</drawSize>
+				<offsets>
+					<li>(0.60,0.05)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+	</ThingDef>
+</Defs>

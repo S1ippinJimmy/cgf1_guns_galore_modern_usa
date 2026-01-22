@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="CGF1_MWP_M9_Bayonet" ParentName="CGF1_MWP_BaseMakeableMeleeWeapon_Quality">
+		<defName>CGF1_MWP_M9_Bayonet</defName>
+		<label>M9 bayonet</label>
+		<description>An American bayonet and knife with a 7-inch (18 cm) blade. Designed by Charles Albert Finn of Phrobis III Ltd, the M9 bayonet was intended to be a dual-purpose utility knife and fighting bayonet for the M16 series of rifles. It was formally adopted in 1986, and has remained the standard-issue bayonet for the US Army ever since.</description>
+		<graphicData>
+			<texPath>CGF1/Melee/M9_Bayonet</texPath>
+			<drawSize>0.78</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>	
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeMelee</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>35</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.5</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<ButcheryFleshSpeed>0.10</ButcheryFleshSpeed>
+			<ButcheryFleshEfficiency>0.05</ButcheryFleshEfficiency>
+		</equippedStatOffsets>
+		<relicChance>0.01</relicChance>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<weaponTags Inherit="False">
+			<li>CGF1_Weapon_Royalty_Refugee</li>
+			<li>CGF1_Weapon_Ideology_Beggar</li>
+			<li>CGF1_Weapon_Ideology_Outlander</li>
+			<li>CGF1_Weapon_Pirate_Drifter</li>
+			<li>CGF1_Weapon_Pirate_Thrasher</li>
+			<li>CGF1_Weapon_Mercenary_Slasher</li>
+			<li>CGF1_Weapon_Outlander_Villager</li>
+			<li>CGF1_Weapon_AncientSoldier</li>
+			<li>CGF1_Weapon_AncientSoldier_Armory</li>
+			<li>CGF1_Weapon_Horax_Underthrall</li>
+			<li>CGF1_Weapon_Pigskin_Villager</li>
+			<li>CGF1_Weapon_Pigskin_Councilman</li>
+			<li>CGF1_Weapon_VRE_SauridVillager</li>
+			<li>CGF1_Weapon_VRE_SauridCouncilman</li>
+			<li>CGF1_Weapon_Imperial_Trader</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ModernUSA_Melee</li>
+		</tradeTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			 <li>
+				<label>blade</label>
+				<capacities>
+				  <li>Cut</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>1.5</cooldownTime>
+			  </li>
+			  <li>
+				<label>point</label>
+				<capacities>
+				  <li>Stab</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>2</cooldownTime>
+			  </li>
+		</tools>
+		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Melee</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="CGF1_MWP_M9_Bayonet">
+		<defName>CGF1_MWP_M9_Bayonet_OD</defName>
+		<label>M9 bayonet (OD)</label>
+		<description>An American bayonet and knife with a 7-inch (18 cm) blade. Designed by Charles Albert Finn of Phrobis III Ltd, the M9 bayonet was intended to be a dual-purpose utility knife and fighting bayonet for the M16 series of rifles. It was formally adopted in 1986, and has remained the standard-issue bayonet for the US Army ever since. Olive drab color.</description>
+		<graphicData>
+			<texPath>CGF1/Melee/Variants/M9_Bayonet_OD</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>0.78</drawSize>
+		</graphicData>
+		<relicChance>0.1</relicChance>
+		<weaponTags Inherit="False">	
+			<li>CGF1_Weapon_Royalty_Refugee</li>
+			<li>CGF1_Weapon_Ideology_Beggar</li>
+			<li>CGF1_Weapon_Ideology_Outlander</li>
+			<li>CGF1_Weapon_Pirate_Drifter</li>
+			<li>CGF1_Weapon_Pirate_Thrasher</li>
+			<li>CGF1_Weapon_Mercenary_Slasher</li>
+			<li>CGF1_Weapon_Outlander_Villager</li>
+			<li>CGF1_Weapon_AncientSoldier</li>
+			<li>CGF1_Weapon_AncientSoldier_Armory</li>
+			<li>CGF1_Weapon_Horax_Underthrall</li>
+			<li>CGF1_Weapon_Pigskin_Villager</li>
+			<li>CGF1_Weapon_Pigskin_Councilman</li>
+			<li>CGF1_Weapon_VRE_SauridVillager</li>
+			<li>CGF1_Weapon_VRE_SauridCouncilman</li>
+			<li>CGF1_Weapon_Imperial_Trader</li>
+		</weaponTags>
+		<generateCommonality>0.20</generateCommonality> <!-- Common -->
+	</ThingDef>
+	
+	<ThingDef ParentName="CGF1_MWP_M9_Bayonet">
+		<defName>CGF1_MWP_M9_Bayonet_Red</defName>
+		<label>M9 bayonet (red)</label>
+		<description>An American bayonet and knife with a 7-inch (18 cm) blade. Designed by Charles Albert Finn of Phrobis III Ltd, the M9 bayonet was intended to be a dual-purpose utility knife and fighting bayonet for the M16 series of rifles. It was formally adopted in 1986, and has remained the standard-issue bayonet for the US Army ever since. Red color.</description>
+		<graphicData>
+			<texPath>CGF1/Melee/Variants/M9_Bayonet_Red</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>0.78</drawSize>
+		</graphicData>
+		<relicChance>0.1</relicChance>
+		<weaponTags Inherit="False">	
+			<li>CGF1_Weapon_Royalty_Refugee</li>
+			<li>CGF1_Weapon_Ideology_Beggar</li>
+			<li>CGF1_Weapon_Ideology_Outlander</li>
+			<li>CGF1_Weapon_Pirate_Drifter</li>
+			<li>CGF1_Weapon_Pirate_Thrasher</li>
+			<li>CGF1_Weapon_Mercenary_Slasher</li>
+			<li>CGF1_Weapon_Outlander_Villager</li>
+			<li>CGF1_Weapon_AncientSoldier_Armory</li>
+			<li>CGF1_Weapon_Horax_Underthrall</li>
+			<li>CGF1_Weapon_Pigskin_Villager</li>
+			<li>CGF1_Weapon_Pigskin_Councilman</li>
+			<li>CGF1_Weapon_VRE_SauridVillager</li>
+			<li>CGF1_Weapon_VRE_SauridCouncilman</li>
+			<li>CGF1_Weapon_Imperial_Trader</li>
+		</weaponTags>
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+	</ThingDef>
+	
+</Defs>

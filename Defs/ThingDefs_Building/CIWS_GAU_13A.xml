@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+	  <ThingDef ParentName="BuildingBase">
+	    <!--<thingClass MayRequire="VanillaExpanded.VFEA">VFEAncients.Building_TurretPD</thingClass>-->
+		<defName>CGF1_MWP_Turret_CIWS_GAU_13A_</defName>
+		<label>CIWS (GAU-13/A)</label>
+		<description>An AI-operated turret. Requires a power source to operate.</description>
+		<thingClass>Building_TurretGun</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+		  <texPath>CGF1/Building/CIWS_Base</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(2,2)</drawSize>
+		  <drawOffset>(0,0,0)</drawOffset>
+		  <damageData>
+			<rect>(0.2,0.2,0.6,0.6)</rect>
+		  </damageData>
+		  <shadowData>
+			<volume>(0.27,0.25,0.27)</volume>
+			<offset>(0,0,0)</offset>
+		  </shadowData>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<uiIconPath>CGF1/Building/CIWS_GAU_13A/CIWS_GAU_13A_MenuIcon</uiIconPath>
+		<uiIconScale>0.95</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<size>(2,2)</size>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<thingCategories>
+			<li>BuildingsSecurity</li>
+		</thingCategories>
+		<costList>
+		  <Steel>400</Steel>
+		  <ComponentIndustrial>35</ComponentIndustrial>
+		 <!-- <CGF1_MWP_GAU_13A_ MayRequire="cgf1.gunsgalore.modern.usa">1</CGF1_MWP_GAU_13A_> Removed from the recipe --> 
+		</costList>
+		<statBases>
+		  <MaxHitPoints>600</MaxHitPoints>
+		  <Flammability>0</Flammability>
+		  <WorkToBuild>20000</WorkToBuild>
+		  <Mass>175</Mass>
+		  <ShootingAccuracyTurret>0.97</ShootingAccuracyTurret>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>300</wickTicks>
+				<explosiveRadius>5.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>0.75</chanceNeverExplodeFromDamage>
+			</li>
+			<li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Breakdownable" />
+			<li MayRequire="VanillaExpanded.VFEA" Class="VFEAncients.CompProperties_SolarPowerUp" />
+			<!--<li Class="CompProperties_Refuelable">
+				<fuelLabel>Shots until barrel change</fuelLabel>
+				<fuelGizmoLabel>Barrel durability</fuelGizmoLabel>
+				<outOfFuelMessage>Needs new barrel</outOfFuelMessage>
+				<fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter>
+				<fuelCapacity>250</fuelCapacity>
+				<fuelMultiplier>0.1</fuelMultiplier>
+				<initialFuelPercent>1</initialFuelPercent>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+			</li>-->
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<hasTooltip>true</hasTooltip>
+		<designationCategory>CGF1_MWP_Category_GunsGalore</designationCategory>
+		<!--<designatorDropdown>CGF1_MWP_Dropdown_RWS</designatorDropdown>-->
+		<building>
+		  <ai_combatDangerous>true</ai_combatDangerous>
+		  <combatPower>120</combatPower> <!-- same as a scavenger -->
+		  <turretGunDef>CGF1_MWP_TurretGun_CIWS_GAU_13A_</turretGunDef>
+		  <turretTopOffset>(0.0,0.0)</turretTopOffset>
+		  <turretTopDrawSize>6.00</turretTopDrawSize>
+		</building>
+		<placeWorkers>
+		  <li>PlaceWorker_TurretTop</li>
+		  <li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<researchPrerequisites>
+		  <li>CGF1_MWP_Research_T10_ModernEmplacements</li>
+		</researchPrerequisites>
+		<tradeTags>
+			<li>CGF1_GunsGalore_X_RWS_Turret</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>CGF1_MWP_TurretGun_CIWS_GAU_13A_</defName>
+		<label>GAU-13/A</label>
+		<description>A close-in weapons system (CIWS) variant of the GAU-13/A.</description>
+		<graphicData>
+		  <texPath>CGF1/Building/CIWS_GAU_13A/CIWS_GAU_13A</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<destroyOnDrop>true</destroyOnDrop>
+		<tradeability>None</tradeability>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+		  <AccuracyTouch>0.40</AccuracyTouch>
+		  <AccuracyShort>0.60</AccuracyShort>
+		  <AccuracyMedium>0.60</AccuracyMedium>
+		  <AccuracyLong>0.50</AccuracyLong>
+		  <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		  <DeteriorationRate>0</DeteriorationRate>
+		  <Mass>151</Mass>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<weaponTags Inherit="false">
+			<li>TurretGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_30x173mm_Auto</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<!--<minRange>4.9</minRange>-->
+				<range>44.9</range>
+				<burstShotCount>50</burstShotCount>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_MG_Minigun4</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>20</muzzleFlashScale>
+				<isPrimary>true</isPrimary>
+			    <defaultCooldownTime>4</defaultCooldownTime>
+				<!--<consumeFuelPerShot>1</consumeFuelPerShot>-->
+				<forcedMissRadius>0.01</forcedMissRadius>
+			</li>
+			<li MayRequire="VanillaExpanded.VFEA">
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>false</hasStandardCommand>
+				<label>point-defense</label>
+				<defaultProjectile>CGF1_MWP_Bullet_30x173mm_Auto</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<!--<minRange>4.9</minRange>-->
+				<range>44.9</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_MG_Minigun4</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>20</muzzleFlashScale>
+				<isPrimary>false</isPrimary>
+			    <defaultCooldownTime>0.001</defaultCooldownTime>
+				<!--<consumeFuelPerShot>1</consumeFuelPerShot>-->
+				<forcedMissRadius>0.01</forcedMissRadius>
+			</li>
+		</verbs>
+		<modExtensions>
+				<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+					<def>MF_StandardMuzzleFalsh</def>
+					<drawSize>(2,2)</drawSize>
+					<offsets>
+						<li>(2.55,0.00)</li>
+					</offsets>
+				</li>
+		</modExtensions>
+	  </ThingDef>
+	
+	
+</Defs>

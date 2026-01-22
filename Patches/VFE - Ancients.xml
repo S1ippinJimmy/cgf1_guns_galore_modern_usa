@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Ancients</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Combat Extended</li>
+					</mods>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[
+								defName = "CGF1_MWP_Turret_CIWS_GAU_4A_" or 			
+								defName = "CGF1_MWP_Turret_CIWS_GAU_8A_" or 			
+								defName = "CGF1_MWP_Turret_CIWS_GAU_12U_Equalizer_" or 			
+								defName = "CGF1_MWP_Turret_CIWS_GAU_13A_" or 			
+								defName = "CGF1_MWP_Turret_CIWS_GAU_22A_" or 
+								defName = "CGF1_MWP_Turret_CIWS_M61_Vulcan_" or 							
+								defName = "CGF1_MWP_Turret_CIWS_M197_" or 			
+								defName = "CGF1_MWP_Turret_CIWS_M230_" or
+								defName = "CGF1_MWP_Turret_CIWS_M242_Bushmaster_" or 					
+								defName = "CGF1_MWP_Turret_CIWS_Mk44_Bushmaster_II_" or
+								defName = "CGF1_MWP_Turret_CIWS_Mk44S_Bushmaster_II_" or
+								defName = "CGF1_MWP_Turret_RIM_116_"
+								]/thingClass</xpath>
+								<value>
+									<thingClass>VFEAncients.Building_TurretPD</thingClass>
+								</value>
+							</li>
+						</operations>
+					</nomatch>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

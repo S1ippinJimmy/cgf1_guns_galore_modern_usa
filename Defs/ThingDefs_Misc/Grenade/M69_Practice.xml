@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_Grenade">
+		<defName>CGF1_MWP_M69_Practice_</defName>
+		<label>M69 Practice Grenade</label>
+		<description>The M69 is a practice/training variant of the American M67 fragmentation grenade. It contains no fuse or explosives, but otherwise has the same user controls and weight as the M67, making it an safe teaching aid for operating and throwing the real thing.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M69_Practice</texPath>
+			<drawSize>0.70</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.3</uiIconScale>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T9_SpaceAgeFirearms</researchPrerequisite>
+		</recipeMaker>
+		<tickerType>Normal</tickerType>
+		<techLevel>Industrial</techLevel>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<costList>
+			<Steel>20</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>13000</WorkToMake>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>CGF1_Weapon_Royalty_Refugee</li>
+			<li>CGF1_Weapon_Ideology_Beggar</li>
+		</weaponTags>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ModernUSA</li>
+			<li>CGF1_GunsGalore_ModernUSA_Grenade</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<label>throw practice grenade</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Projectile_M69_Practice</defaultProjectile>
+				<range>14.9</range>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>CGF1_MWP_SFX_Grenade_Throw</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<generateCommonality>0.0125</generateCommonality> <!-- Rare -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>CGF1_MWP_Projectile_M69_Practice</defName>
+		<label>M69 Practice Grenade</label>
+		<graphicData>
+		  <texPath>CGF1/Projectile/M69_Practice</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>0.6</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>CGF1_MWP_DamageDef_BluntProjectile</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<spinRate>0.8</spinRate>
+			<speed>12</speed>
+			<armorPenetrationBase>0.0</armorPenetrationBase>
+		    <arcHeightFactor>2</arcHeightFactor>
+			<shadowSize>0.4</shadowSize>
+		</projectile>
+  </ThingDef>
+	
+	
+</Defs>

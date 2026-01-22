@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_BaseMakeableMeleeWeapon_Quality">
+		<defName>CGF1_MWP_OKC_3S_Bayonet</defName>
+		<label>OKC-3S bayonet</label>
+		<description>A bayonet adopted by the United States Marine Corps (USMC) in 2003 to replace the earlier M7 and M9 bayonets.</description>
+		<graphicData>
+			<texPath>CGF1/Melee/OKC_3S_Bayonet</texPath>
+			<drawSize>0.78</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>	
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T10_ModernMelee</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>35</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.5</Mass>
+		</statBases>
+		<equippedStatOffsets>
+			<ButcheryFleshSpeed>0.10</ButcheryFleshSpeed>
+			<ButcheryFleshEfficiency>0.05</ButcheryFleshEfficiency>
+		</equippedStatOffsets>
+		<relicChance>0.01</relicChance>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<weaponTags Inherit="False">
+			<li>CGF1_Weapon_Royalty_Refugee</li>
+			<li>CGF1_Weapon_Ideology_Beggar</li>
+			<li>CGF1_Weapon_Ideology_Outlander</li>
+			<li>CGF1_Weapon_Pirate_Drifter</li>
+			<li>CGF1_Weapon_Pirate_Thrasher</li>
+			<li>CGF1_Weapon_Mercenary_Slasher</li>
+			<li>CGF1_Weapon_Outlander_Villager</li>
+			<li>CGF1_Weapon_AncientSoldier</li>
+			<li>CGF1_Weapon_AncientSoldier_Armory</li>
+			<li>CGF1_Weapon_Horax_Underthrall</li>
+			<li>CGF1_Weapon_Pigskin_Villager</li>
+			<li>CGF1_Weapon_Pigskin_Councilman</li>
+			<li>CGF1_Weapon_VRE_SauridVillager</li>
+			<li>CGF1_Weapon_VRE_SauridCouncilman</li>
+			<li>CGF1_Weapon_Imperial_Trader</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ModernUSA_Melee</li>
+		</tradeTags>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			 <li>
+				<label>blade</label>
+				<capacities>
+				  <li>Cut</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>1.5</cooldownTime>
+			  </li>
+			  <li>
+				<label>point</label>
+				<capacities>
+				  <li>Stab</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>2</cooldownTime>
+			  </li>
+		</tools>
+		<generateCommonality>0.20</generateCommonality> <!-- Common -->
+	</ThingDef>
+	
+</Defs>

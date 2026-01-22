@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_HMG_Dismounted_T0">
+		<defName>CGF1_MWP_GAU_19A_Fixed_</defName>
+		<label>GAU-19/A Fixed</label>
+		<description>Caliber: 12.7x99mm NATO. 1200-round belt link. Select-Fire.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/GAU_19A_Fixed</texPath>
+			<drawSize>1.12</drawSize>
+			<drawOffsetNorth MayRequire="CarnySenpai.EnableOversizedWeapons">(0.03,0.0,-0.12)</drawOffsetNorth>
+			<drawOffsetSouth MayRequire="CarnySenpai.EnableOversizedWeapons">(0.03,0.0,-0.12)</drawOffsetSouth>
+			<drawOffsetEast MayRequire="CarnySenpai.EnableOversizedWeapons">(0.03,0.0,-0.12)</drawOffsetEast>
+			<drawOffsetWest MayRequire="CarnySenpai.EnableOversizedWeapons">(-0.03,0.0,-0.12)</drawOffsetWest>
+		</graphicData>
+		<rotatable>true</rotatable> <!-- Temp -->
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T10_ModernFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>225</Steel>
+			<ComponentIndustrial>22</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>100000</WorkToMake>
+			<Mass>63</Mass>
+			<AccuracyTouch>0.40</AccuracyTouch>
+			<AccuracyShort>0.48</AccuracyShort>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>3.1</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_Weapon_Mech_CentipedeGunner</li>
+		</weaponTags>
+		<weaponClasses>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ModernUSA_Turret</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_127x99mmNATO_Auto</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<range>36.9</range>
+				<burstShotCount>50</burstShotCount>
+				<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_MG_Minigun3</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.35,1.35)</drawSize>
+				<offsets>
+					<li>(0.58,0.04)</li>
+				</offsets>
+			</li>
+			<li MayRequire="VanillaExpanded.VWEHW" Class="VEF.Weapons.HeavyWeapon">
+				<weaponHitPointsDeductionOnShot>0</weaponHitPointsDeductionOnShot>
+				<isHeavy>true</isHeavy>
+				<supportedArmors>
+					<li>VWE_Apparel_Exoframe</li>
+				</supportedArmors>
+				<supportedTraits>
+					<li>Tough</li>
+				</supportedTraits>
+				<disableOptionLabelKey>VWE.CannotEquipHeavy</disableOptionLabelKey>
+			</li>
+		</modExtensions>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Manned</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+</Defs>
