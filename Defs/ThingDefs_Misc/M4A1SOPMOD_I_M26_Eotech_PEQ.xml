@@ -7,7 +7,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/M4A1SOPMOD_I_M26_Eotech_PEQ</texPath>
-			<drawSize>1.03</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -91,7 +91,7 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.6,0.05)</li>
+					<li>(0.61,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>

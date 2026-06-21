@@ -78,7 +78,7 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.65,0.05)</li>
+					<li>(0.65,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>
@@ -91,7 +91,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/UP/M16A4SOPMOD_Eotech_PEQ_SD</texPath>
-			<drawSize>1.23</drawSize>
+			<drawSize>1.15</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>

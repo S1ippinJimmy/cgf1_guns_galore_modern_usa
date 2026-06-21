@@ -7,7 +7,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/M4</texPath>
-			<drawSize>1.00</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -95,7 +95,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/UP/M4_Bayonet</texPath>
-			<drawSize>1.20</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -161,9 +161,9 @@
 		<modExtensions>
 			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
 				<def>MF_StandardMuzzleFalshThree</def>
-				<drawSize>(0.8,0.8)</drawSize>
+				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.62,0.08)</li>
+					<li>(0.55,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>
@@ -177,7 +177,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/UP/M4_SD</texPath>
-			<drawSize>1.20</drawSize>
+			<drawSize>1.07</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>

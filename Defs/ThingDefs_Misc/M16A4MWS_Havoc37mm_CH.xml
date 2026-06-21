@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
+		<defName>CGF1_MWP_M16A4MWS_Havoc37mm_CH_</defName>
+		<label>M16A4 MWS Havoc 37mm (CH)</label>
+		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
+		<graphicData>
+			<texPath>CGF1/Gun/M16A4MWS_Havoc37mm_CH</texPath>
+			<drawSize>1.03</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CGF1_MWP_Building_Gunsmith</li>
+			</recipeUsers>
+			<researchPrerequisite>CGF1_MWP_Research_T10_ModernFirearms</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>70</Steel>
+			<ComponentIndustrial>9</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>4.15</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.70</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<weaponTags>
+			<li>CGF1_AR_Civilian</li>
+			<li>CGF1_AR_Military</li>
+			<li>CGF1_AR_Military_Advanced</li>
+		</weaponTags>
+		<tradeTags>
+			<li>CGF1_GunsGalore_ModernUSA</li>
+			<li>CGF1_GunsGalore_ModernUSA_AR</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>30.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>CGF1_MWP_SFX_Rifle_Auto12</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<label>M16A4 MWS</label>
+				<commandIcon>CGF1/Gun/M16A4MWS_Havoc37mm_CH</commandIcon>
+			</li>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>CGF1_MWP_Bullet_265mm_Flare</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>20.9</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>CGF1_MWP_SFX_Pistol_Flare1</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<label>Havoc 37mm</label>
+				<commandIcon>CGF1/Underbarrel/SpikesTactical_Havoc_37mm</commandIcon>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+				<def>MF_StandardMuzzleFalshThree</def>
+				<drawSize>(0.6,0.6)</drawSize>
+				<offsets>
+					<li>(0.65,0.06)</li>
+				</offsets>
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>M16A4 MWS</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+					</li>
+					<li>
+						<label>Havoc 37mm</label>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<description>Caliber: 37mm. 1-round tube. Single shot.					
+The Spikes Tactical Havoc is a single shot 37mm grenade launcher which features a side-loading mechanism. It is primarily designed to fire utility and less-lethal grenade shells, including signal and illumination flares, smoke shells, gas canisters (such as CS, CN, or OC pepper spray), impact shells (such as bean bag or rubber baton rounds), and training rounds, though a number of highly regulated lethal rounds also exist. Because 37mm launchers typically do not accept high explosive shells, their use is broadly limited to law enforcement and civilian/commercial applications. This Havoc 37mm, by default, launches disruptor flare rounds.</description>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
+	</ThingDef>
+	
+</Defs>
