@@ -24,7 +24,7 @@
 		</costList>
 		<statBases>
 			<WorkToMake>55000</WorkToMake>
-			<Mass>4.25</Mass>
+			<Mass>4.3</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>

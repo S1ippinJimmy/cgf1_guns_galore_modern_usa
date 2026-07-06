@@ -2,11 +2,11 @@
 <Defs>
 
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M16A4MWS_ACOG_PEQ_</defName>
-		<label>M16A4 MWS (ACOG PEQ)</label>
+		<defName>CGF1_MWP_M16A4MWS_CH_ANPVS4_PEQ_</defName>
+		<label>M16A4 MWS (CH AN/PVS-4 PEQ)</label>
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M16A4MWS_ACOG_PEQ</texPath>
+			<texPath>CGF1/Gun/M16A4MWS_CH_ANPVS4_PEQ</texPath>
 			<drawSize>1.03</drawSize>
 		</graphicData>
 		<recipeMaker>
@@ -20,11 +20,11 @@
 		</recipeMaker>
 		<costList>
 			<Steel>60</Steel>
-			<ComponentIndustrial>9</ComponentIndustrial>
+			<ComponentIndustrial>11</ComponentIndustrial>
 		</costList>
 		<statBases>
 			<WorkToMake>47500</WorkToMake>
-			<Mass>3.8</Mass>
+			<Mass>4.25</Mass>
 			<AccuracyTouch>0.65</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>
@@ -82,8 +82,7 @@
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.5</generateCommonality> <!-- Abundant -->
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 	</ThingDef>
-	
 	
 </Defs>
