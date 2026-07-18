@@ -2,12 +2,12 @@
 <Defs>
 
 	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M4Early_Masterkey_</defName>
-		<label>M4 Early Masterkey</label>
+		<defName>CGF1_MWP_M16A4SOPMOD_M320_</defName>
+		<label>M16A4 SOPMOD M320</label>
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
-			<texPath>CGF1/Gun/M4Early_Masterkey</texPath>
-			<drawSize>1.07</drawSize>
+			<texPath>CGF1/Gun/M16A4SOPMOD_M320</texPath>
+			<drawSize>1.03</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -19,12 +19,12 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Steel>65</Steel>
+			<Steel>70</Steel>
 			<ComponentIndustrial>9</ComponentIndustrial>
 		</costList>
 		<statBases>
 			<WorkToMake>50000</WorkToMake>
-			<Mass>6.05</Mass>
+			<Mass>4.25</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.65</AccuracyMedium>
@@ -52,20 +52,26 @@
 				<soundCast>CGF1_MWP_SFX_Rifle_Auto12</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
-				<label>M4 Early</label>
-				<commandIcon>CGF1/Gun/M4Early_Masterkey</commandIcon>
+				<label>M16A4 SOPMOD</label>
+				<commandIcon>CGF1/Gun/M16A4SOPMOD_M320</commandIcon>
 			</li>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
-				<warmupTime>1</warmupTime>
-				<range>12.9</range>
-				<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-				<label>KAC Masterkey</label>
-				<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+				<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>20.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>2</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<onlyManualCast>true</onlyManualCast>
+				<label>M320</label>
+				<commandIcon>CGF1/Underbarrel/M320</commandIcon>
 			</li>
 		</verbs>
 		<tools>
@@ -92,29 +98,30 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.6,0.6)</drawSize>
 				<offsets>
-					<li>(0.58,0.05)</li>
+					<li>(0.65,0.06)</li>
 				</offsets>
 			</li>
 		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 		<comps>
 			<li Class="MVCF.Comps.CompProperties_VerbProps">
 				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
 				<verbProps>
 					<li>
-						<label>M4 Early</label>
+						<label>M16A4 SOPMOD</label>
 						<canBeToggled>true</canBeToggled>
 						<separateToggle>false</separateToggle>
 					</li>
 					<li>
-						<label>KAC Masterkey</label>
+						<label>M320</label>
 						<canBeToggled>true</canBeToggled>
 						<separateToggle>false</separateToggle>
-						<description>Caliber: 12 Gauge. 3-round tube. Pump-action.					
-The Knight's Armament Company (KAC) Masterkey is a cut down Remington 870 shotgun built to attach to the barrel/rail of an M16 or M4 rifle. Primarily designed for breaching doors, the Masterkey was created to replace the need for US infantrymen to carry a separate shotgun used in the same task. Used for many years on an unofficial basis, the Masterkey ultimately lost out to the C-More M26 MASS shotgun and was never adopted, but remains a fairly iconic attachment for the M16 series.</description>
+						<description>Caliber: 40x46mm. 1-round tube. Single shot.					
+The Heckler and Koch M320 Grenade Launcher Module (GLM) is a single shot grenade launcher developed from the earlier AG36. It was developed in the 2000s in order to provide a replacement for older M203 grenade launchers used on the M16 and M4 then standard in US Military service. The resulting M320 had vastly improved ergonomics and reliability, and could also be dismounted and used standalone.</description>
 					</li>
 				</verbProps>
 			</li>
 		</comps>
+		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
 	</ThingDef>
+	
 </Defs>
