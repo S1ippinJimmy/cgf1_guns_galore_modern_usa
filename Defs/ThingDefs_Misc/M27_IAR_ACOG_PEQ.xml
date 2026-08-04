@@ -7,7 +7,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/M27_IAR_ACOG_PEQ</texPath>
-			<drawSize>1.03</drawSize>
+			<drawSize>1.04</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>
@@ -91,7 +91,7 @@
 		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
 		<graphicData>
 			<texPath>CGF1/Gun/UP/M27_IAR_ACOG_PEQ_SD</texPath>
-			<drawSize>1.23</drawSize>
+			<drawSize>1.04</drawSize>
 		</graphicData>
 		<recipeMaker>
 			<recipeUsers>

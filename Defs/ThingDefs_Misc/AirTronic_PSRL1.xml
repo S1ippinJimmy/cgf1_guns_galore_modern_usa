@@ -50,7 +50,7 @@
 				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
 				<range>40.9</range>
 				<soundCast>CGF1_MWP_SFX_Launcher_RPG</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<soundCastTail>CGF1_MWP_SFX_Dist_RPG</soundCastTail>
 				<onlyManualCast>true</onlyManualCast>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>

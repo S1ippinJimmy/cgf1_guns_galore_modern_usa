@@ -53,7 +53,7 @@
 				<minRange>20</minRange>
 				<soundCast>CGF1_MWP_SFX_Launcher_Javelin</soundCast>
 				<soundAiming>CGF1_MWP_SFX_Launcher_LockOn</soundAiming>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<soundCastTail>CGF1_MWP_SFX_Dist_Javelin</soundCastTail>
 				<onlyManualCast>true</onlyManualCast>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
