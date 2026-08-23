@@ -78,11 +78,14 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.8,0.8)</drawSize>
 				<offsets>
-					<li>(0.6,0.05)</li>
+					<li>(0.65,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
 		<generateCommonality>0.10</generateCommonality> <!-- Average -->
+		<thingSetMakerTags>
+			<li>CGF1_GunsGalore_RewardAncient_Common</li>
+		</thingSetMakerTags>
 	</ThingDef>
 	
 </Defs>

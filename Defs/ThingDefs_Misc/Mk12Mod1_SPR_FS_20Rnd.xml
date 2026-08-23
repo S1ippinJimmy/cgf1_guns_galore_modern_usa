@@ -24,7 +24,7 @@
 		</costList>
 		<statBases>
 			<WorkToMake>50000</WorkToMake>
-			<Mass>4.3</Mass>
+			<Mass>4.35</Mass>
 			<AccuracyTouch>0.55</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.80</AccuracyMedium>
@@ -78,7 +78,7 @@
 				<def>MF_StandardMuzzleFalshThree</def>
 				<drawSize>(0.8,0.8)</drawSize>
 				<offsets>
-					<li>(0.6,0.05)</li>
+					<li>(0.65,0.05)</li>
 				</offsets>
 			</li>
 		</modExtensions>
