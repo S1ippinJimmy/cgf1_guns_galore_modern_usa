@@ -87,166 +87,384 @@
 		<thingSetMakerTags>
 			<li>CGF1_GunsGalore_RewardAncient_Common</li>
 		</thingSetMakerTags>
+		
+		<comps>
+			<li Class="WeaponVariants.CompProperties_WeaponVariants">
+				<generateBaseWeapon>true</generateBaseWeapon>
+				<variants>
+					<li>
+						<defName>CGF1_MWP_M4_Bayonet</defName>
+						<label>M4 (Bayonet)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached M9 bayonet.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Bayonet</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- M9 Bayonet -->
+						</statOffsets>
+						<replaceTools>true</replaceTools>
+						<tools>
+							<li>
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+							<li>
+								<label>bayonet</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>13</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+						</tools>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.55,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_SD</defName>
+						<label>M4 (SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached suppressor.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_SD</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Suppressor -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_20Rnd</defName>
+						<label>M4 (20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant uses a 20-round magazine.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>-0.05</Mass> <!-- 30 to 20Rnd (-0.05) -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_100RndCMAG</defName>
+						<label>M4 (100Rnd CMAG)</label>
+						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description> <!-- Does not get increased burst as it is an M4 -->
+						<commonality>0.0625</commonality> <!-- 1 in 16 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_100RndCMAG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.75</Mass> <!-- 30 to 100Rnd CMAG -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH</defName>
+						<label>M4 (CH)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle.</description>
+						<commonality>1</commonality> <!-- 1 in 1 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.1</Mass> <!-- Carry Handle -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_Bayonet</defName>
+						<label>M4 (CH Bayonet)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and M9 bayonet.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_Bayonet</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- M9 Bayonet + Carry Handle -->
+						</statOffsets>
+						<replaceTools>true</replaceTools>
+						<tools>
+							<li>
+								<label>stock</label>
+								<capacities>
+									<li>Blunt</li>
+								</capacities>
+								<power>10</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+							<li>
+								<label>bayonet</label>
+								<capacities>
+									<li>Stab</li>
+								</capacities>
+								<power>13</power>
+								<cooldownTime>2</cooldownTime>
+							</li>
+						</tools>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.55,0.06)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_SD</defName>
+						<label>M4 (CH SD)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and suppressor.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_SD</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.3</Mass> <!-- Suppressor + Carry Handle -->
+						</statOffsets>
+						<equippedStatOffsets>
+							<HuntingStealth>0.5</HuntingStealth> <!-- 0.5 for suppressors -->
+						</equippedStatOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
+								<muzzleFlashScale>-8</muzzleFlashScale>
+							</li>
+						</verbModifiers>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>CGF1_MF_StandardMuzzleFlashSD</def>
+								<drawSize>(0.3,0.3)</drawSize>
+								<offsets>
+									<li>(0.7,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_20Rnd</defName>
+						<label>M4 (CH 20Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 20-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and uses a 20-round magazine.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_20Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- Carry Handle + 30 to 20Rnd (-0.05) -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_ANPVS4</defName>
+						<label>M4 (CH AN/PVS-4)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and an AN/PVS-4 scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_ANPVS4</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.9</Mass> <!-- Carry Handle (0.1) + AN/PVS-4 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_Gooseneck</defName>
+						<label>M4 (CH Gooseneck)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle with an additional gooseneck-style mount.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_Gooseneck</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.15</Mass> <!-- Carry Handle (0.1) + Gooseneck (0.05) -->
+						</statOffsets>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_Gooseneck_M68</defName>
+						<label>M4 (CH Gooseneck M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle with an additional gooseneck-style mount attached to which is an Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_Gooseneck_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Carry Handle (0.1) + Gooseneck (0.05) + M68 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_Scope</defName>
+						<label>M4 CH (Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and a Colt 3x20 scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.2</Mass> <!-- Carry Handle (0.1) + Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_CH_Scope_FL</defName>
+						<label>M4 CH (Scope FL)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and a Colt 3x20 scope, as well as a flashlight.</description>
+						<commonality>0.04</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_Scope_FL</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.22</Mass> <!-- Carry Handle (0.1) + Colt 3x20 (0.1) + Flashlight (0.02) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_ANPVS17</defName>
+						<label>M4 (AN/PVS-17)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-17 night vision scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_ANPVS17</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.9</Mass> <!-- AN/PVS-17 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_ANPAS13</defName>
+						<label>M4 (AN/PAS-13)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PAS-13 thermal scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_ANPAS13</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.3</Mass> <!-- AN/PAS-13 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_ACOG</defName>
+						<label>M4 (ACOG)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached ACOG scope.</description>
+						<commonality>0.2</commonality> <!-- 1 in 5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_ACOG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- ACOG -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_Eotech</defName>
+						<label>M4 (Eotech)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Eotech 552 red dot optic.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Eotech</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- Eotech -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M68</defName>
+						<label>M4 (M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.4</commonality> <!-- 1 in 4 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.05</Mass> <!-- M68 -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+				</variants>
+			</li>
+		</comps>
 	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M4_Bayonet_</defName>
-		<label>M4 (Bayonet)</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/M4_Bayonet</texPath>
-			<drawSize>1.07</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T10_ModernFirearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>55</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.5</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags>
-			<li>CGF1_AR_Military</li>
-		</weaponTags>
-		<tradeTags Inherit="False">
-			<li>CGF1_GunsGalore_NoSpawn</li>
-		</tradeTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Auto11</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>bayonet</label>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>13</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<modExtensions>
-			<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
-				<def>MF_StandardMuzzleFalshThree</def>
-				<drawSize>(0.6,0.6)</drawSize>
-				<offsets>
-					<li>(0.55,0.06)</li>
-				</offsets>
-			</li>
-		</modExtensions>
-		<generateCommonality>0.05</generateCommonality> <!-- Uncommon -->
-		<thingSetMakerTags Inherit="False"/>
-	</ThingDef>
-	
-	<ThingDef ParentName="CGF1_MWP_AssaultRifle_T0">
-		<defName>CGF1_MWP_M4_SD_</defName>
-		<label>M4 (SD)</label>
-		<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.</description>
-		<graphicData>
-			<texPath>CGF1/Gun/UP/M4_SD</texPath>
-			<drawSize>1.07</drawSize>
-		</graphicData>
-		<recipeMaker>
-			<recipeUsers>
-				<li>CGF1_MWP_Building_Gunsmith</li>
-			</recipeUsers>
-			<researchPrerequisite>CGF1_MWP_Research_T10_ModernFirearms</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>6</Crafting>
-			</skillRequirements>
-		</recipeMaker>
-		<costList>
-			<Steel>55</Steel>
-			<ComponentIndustrial>7</ComponentIndustrial>
-		</costList>
-		<statBases>
-			<WorkToMake>40000</WorkToMake>
-			<Mass>3.6</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.70</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
-		</statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>
-		<weaponTags>
-			<li>CGF1_AR_Military</li>
-			<li>CGF1_AR_Military_SpecOps</li>
-		</weaponTags>
-		<tradeTags Inherit="False">
-			<li>CGF1_GunsGalore_NoSpawn</li>
-		</tradeTags>
-		<equippedStatOffsets>
-			<HuntingStealth>0.3</HuntingStealth>
-		</equippedStatOffsets>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>CGF1_MWP_Bullet_556x45mmNATO_Auto</defaultProjectile>
-				<warmupTime>1</warmupTime>
-				<range>30.9</range>
-				<burstShotCount>3</burstShotCount>
-				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-				<soundCast>CGF1_MWP_SFX_Rifle_Semi_SD1</soundCast>
-				<muzzleFlashScale>1</muzzleFlashScale>
-			</li>
-		</verbs>
-		<tools>
-			<li>
-				<label>stock</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>10</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>barrel</label>
-				<capacities>
-					<li>Blunt</li>
-					<li>Poke</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
-		<generateCommonality>0.20</generateCommonality> <!-- Common -->
-		<thingSetMakerTags Inherit="False"/>
-	</ThingDef>
-	
 	
 </Defs>
