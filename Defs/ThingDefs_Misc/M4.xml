@@ -176,6 +176,18 @@
 						</statOffsets>
 					</li>
 					<li>
+						<defName>CGF1_MWP_M4_25Rnd</defName>
+						<label>M4 (25Rnd)</label>
+						<description>Caliber: 5.56x45mm NATO. 25-round detachable mag. Select-Fire.\n\nThis variant uses a rare, early 25-round AR-15 test magazine.</description>
+						<commonality>0.01</commonality> <!-- 1 in 100 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_25Rnd</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>0.02</Mass> <!-- 20 to 25Rnd -->
+						</statOffsets>
+					</li>
+					<li>
 						<defName>CGF1_MWP_M4_100RndCMAG</defName>
 						<label>M4 (100Rnd CMAG)</label>
 						<description>Caliber: 5.56x45mm NATO. 100-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a 100-round Beta C-Mag.</description> <!-- Does not get increased burst as it is an M4 -->
@@ -283,6 +295,25 @@
 						</statOffsets>
 					</li>
 					<li>
+						<defName>CGF1_MWP_M4_CH_ANPVS2</defName>
+						<label>M4 (CH AN/PVS-2)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and an AN/PVS-4 scope.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_CH_ANPVS2</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.8</Mass> <!-- Carry Handle (0.1) + AN/PVS-2 (2.7) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+							</li>
+						</verbModifiers>
+					</li>
+					<li>
 						<defName>CGF1_MWP_M4_CH_ANPVS4</defName>
 						<label>M4 (CH AN/PVS-4)</label>
 						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached carry handle and an AN/PVS-4 scope.</description>
@@ -291,7 +322,7 @@
 							<texPath>CGF1/Gun/Variant/M4_CH_ANPVS4</texPath>
 						</graphicData>
 						<statOffsets>
-							<Mass>1.9</Mass> <!-- Carry Handle (0.1) + AN/PVS-4 -->
+							<Mass>1.9</Mass> <!-- Carry Handle (0.1) + AN/PVS-4 (1.8) -->
 						</statOffsets>
 						<verbModifiers>
 							<li>
@@ -370,15 +401,15 @@
 						</verbModifiers>
 					</li>
 					<li>
-						<defName>CGF1_MWP_M4_ANPVS17</defName>
-						<label>M4 (AN/PVS-17)</label>
-						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-17 night vision scope.</description>
+						<defName>CGF1_MWP_M4_ANPAS13</defName>
+						<label>M4 (AN/PAS-13)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PAS-13 thermal scope.</description>
 						<commonality>0.05</commonality> <!-- 1 in 20 -->
 						<graphicData>
-							<texPath>CGF1/Gun/Variant/M4_ANPVS17</texPath>
+							<texPath>CGF1/Gun/Variant/M4_ANPAS13</texPath>
 						</graphicData>
 						<statOffsets>
-							<Mass>0.9</Mass> <!-- AN/PVS-17 -->
+							<Mass>2.3</Mass> <!-- AN/PAS-13 -->
 						</statOffsets>
 						<verbModifiers>
 							<li>
@@ -389,15 +420,15 @@
 						</verbModifiers>
 					</li>
 					<li>
-						<defName>CGF1_MWP_M4_ANPAS13</defName>
-						<label>M4 (AN/PAS-13)</label>
-						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PAS-13 thermal scope.</description>
+						<defName>CGF1_MWP_M4_ANPVS17</defName>
+						<label>M4 (AN/PVS-17)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has an attached AN/PVS-17 night vision scope.</description>
 						<commonality>0.05</commonality> <!-- 1 in 20 -->
 						<graphicData>
-							<texPath>CGF1/Gun/Variant/M4_ANPAS13</texPath>
+							<texPath>CGF1/Gun/Variant/M4_ANPVS17</texPath>
 						</graphicData>
 						<statOffsets>
-							<Mass>2.3</Mass> <!-- AN/PAS-13 -->
+							<Mass>0.9</Mass> <!-- AN/PVS-17 -->
 						</statOffsets>
 						<verbModifiers>
 							<li>
@@ -461,6 +492,977 @@
 								<warmupTime>-0.05</warmupTime>
 							</li>
 						</verbModifiers>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M203</defName>
+						<label>M4 M203</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M203</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.4</Mass> <!-- M203 (1.4) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M203</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M203_CH</defName>
+						<label>M4 M203 (CH)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and a carry handle.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M203_CH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.5</Mass> <!-- M203 (1.4) + Carry Handle (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M203_CH</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M203_CH_Scope</defName>
+						<label>M4 M203 (CH Scope)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and a carry handle with a Colt 3x20 scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M203_CH_Scope</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- M203 (1.4) + Carry Handle (0.1) + Colt 3x20 (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M203_CH_Scope</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M203_ACOG</defName>
+						<label>M4 M203 (ACOG)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and an ACOG scope.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M203_ACOG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.45</Mass> <!-- M203 (1.4) + ACOG (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M203_ACOG</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M203_Eotech</defName>
+						<label>M4 M203 (Eotech)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and an Eotech 552 red dot optic.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M203_Eotech</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.45</Mass> <!-- M203 (1.4) + Eotech (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M203_Eotech</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M203_M68</defName>
+						<label>M4 M203 (M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M203 grenade launcher and has an attached Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.1</commonality> <!-- 1 in 10 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M203_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.45</Mass> <!-- M203 (1.4) + M68 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M203_M68</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.5</warmupTime>
+								<range>20.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M203</label>
+								<commandIcon>CGF1/Underbarrel/M203</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M320</defName>
+						<label>M4 M320</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M320 grenade launcher.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M320</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.55</Mass> <!-- M320 (1.55) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M320</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M320</label>
+								<commandIcon>CGF1/Underbarrel/M320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M320_CH</defName>
+						<label>M4 M320 (CH)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M320 grenade launcher and a carry handle.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M320_CH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.65</Mass> <!-- M320 (1.55) + Carry Handle (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M320_CH</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M320</label>
+								<commandIcon>CGF1/Underbarrel/M320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M320_ACOG</defName>
+						<label>M4 M320 (ACOG)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M320 grenade launcher and an ACOG scope.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M320_ACOG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- M320 (1.55) + ACOG (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M320_ACOG</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M320</label>
+								<commandIcon>CGF1/Underbarrel/M320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M320_Eotech</defName>
+						<label>M4 M320 (Eotech)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M320 grenade launcher and an Eotech 552 red dot optic.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M320_Eotech</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- M320 (1.55) + Eotech (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M320_Eotech</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M320</label>
+								<commandIcon>CGF1/Underbarrel/M320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M320_M68</defName>
+						<label>M4 M320 (M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an M320 grenade launcher and has an attached Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.025</commonality> <!-- 1 in 40 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M320_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- M320 (1.55) + Aimpoint CompM2 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M320_M68</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>M320</label>
+								<commandIcon>CGF1/Underbarrel/M320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_XM320</defName>
+						<label>M4 XM320</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM320 grenade launcher.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_XM320</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- XM320 (1.6) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_XM320</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM320</label>
+								<commandIcon>CGF1/Underbarrel/XM320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_XM320_CH</defName>
+						<label>M4 XM320 (CH)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM320 grenade launcher and a carry handle.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_XM320_CH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.7</Mass> <!-- XM320 (1.6) + Carry Handle (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_XM320_CH</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM320</label>
+								<commandIcon>CGF1/Underbarrel/XM320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_XM320_M68</defName>
+						<label>M4 XM320 (M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with an XM320 grenade launcher and has an attached Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.02</commonality> <!-- 1 in 50 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_XM320_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.65</Mass> <!-- XM320 (1.6) + Aimpoint CompM2 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_XM320_M68</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_40x46mm_Grenade</defaultProjectile>
+								<warmupTime>3.6</warmupTime>
+								<range>22.9</range>
+								<forcedMissRadius>1.9</forcedMissRadius>
+								<burstShotCount>1</burstShotCount>
+								<soundCast>CGF1_MWP_SFX_GrenadeLauncher1</soundCast>
+								<soundCastTail>GunTail_Medium</soundCastTail>
+								<muzzleFlashScale>2</muzzleFlashScale>
+								<targetParams>
+									<canTargetLocations>true</canTargetLocations>
+								</targetParams>
+								<label>XM320</label>
+								<commandIcon>CGF1/Underbarrel/XM320</commandIcon>
+							</li>
+						</addedVerbs>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_Masterkey</defName>
+						<label>M4 Masterkey</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Masterkey</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.0</Mass> <!-- KAC Masterkey -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_Masterkey</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_Masterkey_CH</defName>
+						<label>M4 Masterkey (CH)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun and a carry handle.</description>
+						<commonality>0.08</commonality> <!-- 1 in 12.5 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Masterkey_CH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.1</Mass> <!-- KAC Masterkey + CH (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_Masterkey_CH</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_Masterkey_ACOG</defName>
+						<label>M4 Masterkey (ACOG)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun and an ACOG scope.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Masterkey_ACOG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.05</Mass> <!-- KAC Masterkey + Eotech 552 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_Masterkey_ACOG</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_Masterkey_Eotech</defName>
+						<label>M4 Masterkey (Eotech)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun and an Eotech 552 red dot optic.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Masterkey_Eotech</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.05</Mass> <!-- KAC Masterkey + Eotech 552 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_Masterkey_Eotech</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_Masterkey_M68</defName>
+						<label>M4 Masterkey (M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a KAC Masterkey shotgun and an Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_Masterkey_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>2.05</Mass> <!-- KAC Masterkey + Aimpoint CompM2 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_Masterkey_M68</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>KAC Masterkey</label>
+								<commandIcon>CGF1/Underbarrel/Masterkey</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M26</defName>
+						<label>M4 M26</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a C-More M26 MASS underbarrel shotgun.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M26</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.6</Mass> <!-- M26 MASS -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_Masterkey</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>M26 MASS</label>
+								<commandIcon>CGF1/Underbarrel/M26_MASS</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M26_CH</defName>
+						<label>M4 M26 (CH)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a C-More M26 MASS underbarrel shotgun and a carry handle.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M26_CH</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.7</Mass> <!-- M26 MASS + Carry Handle (0.1) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M26_CH</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>M26 MASS</label>
+								<commandIcon>CGF1/Underbarrel/M26_MASS</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M26_ACOG</defName>
+						<label>M4 M26 (ACOG)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a C-More M26 MASS underbarrel shotgun and an ACOG scope.</description>
+						<commonality>0.04</commonality> <!-- 1 in 25 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M26_ACOG</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.65</Mass> <!-- M26 MASS + ACOG (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<range>3</range>
+								<warmupTime>0.15</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M26_ACOG</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>M26 MASS</label>
+								<commandIcon>CGF1/Underbarrel/M26_MASS</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M26_Eotech</defName>
+						<label>M4 M26 (Eotech)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a C-More M26 MASS underbarrel shotgun and an Eotech 552 red dot optic.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M26_Eotech</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.65</Mass> <!-- M26 MASS + Eotech 552 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M26_Eotech</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>M26 MASS</label>
+								<commandIcon>CGF1/Underbarrel/M26_MASS</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
+					</li>
+					<li>
+						<defName>CGF1_MWP_M4_M26_M68</defName>
+						<label>M4 M26 (M68)</label>
+						<description>Caliber: 5.56x45mm NATO. 30-round detachable mag. Select-Fire.\n\nThis variant has been fitted with a C-More M26 MASS underbarrel shotgun and an Aimpoint CompM2 (M68) red dot optic.</description>
+						<commonality>0.05</commonality> <!-- 1 in 20 -->
+						<graphicData>
+							<texPath>CGF1/Gun/Variant/M4_M26_M68</texPath>
+						</graphicData>
+						<statOffsets>
+							<Mass>1.65</Mass> <!-- M26 MASS + Aimpoint CompM2 (0.05) -->
+						</statOffsets>
+						<verbModifiers>
+							<li>
+								<verbIndex>0</verbIndex>
+								<warmupTime>-0.05</warmupTime>
+								<label>M4</label>
+								<commandIcon>CGF1/Gun/Variant/M4_M26_M68</commandIcon>
+							</li>
+						</verbModifiers>
+						<addedVerbs>
+							<li>
+								<verbClass>Verb_Shoot</verbClass>
+								<hasStandardCommand>true</hasStandardCommand>
+								<defaultProjectile>CGF1_MWP_Bullet_12Gauge_Slug_Shotgun</defaultProjectile>
+								<warmupTime>1</warmupTime>
+								<range>12.9</range>
+								<soundCast>CGF1_MWP_SFX_Shotgun_Auto1</soundCast>
+								<soundCastTail>GunTail_Heavy</soundCastTail>
+								<muzzleFlashScale>9</muzzleFlashScale>
+								<label>M26 MASS</label>
+								<commandIcon>CGF1/Underbarrel/M26_MASS</commandIcon>
+							</li>
+						</addedVerbs>
+						<modExtensions>
+							<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="issaczhuang.muzzleflash">
+								<def>MF_StandardMuzzleFalshThree</def>
+								<drawSize>(0.6,0.6)</drawSize>
+								<offsets>
+									<li>(0.58,0.05)</li>
+								</offsets>
+							</li>
+						</modExtensions>
 					</li>
 				</variants>
 			</li>
